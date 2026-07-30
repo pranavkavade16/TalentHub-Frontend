@@ -2,31 +2,33 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white border-bottom sticky-top px-3">
-      <div className="container-fluid">
+    <nav
+      className="navbar navbar-expand-lg bg-white border-bottom sticky-top"
+      style={{ height: "72px" }}
+    >
+      <div className="container-fluid px-4">
         {/* Logo */}
-        <NavLink to="/" className="navbar-brand fw-bold text-primary fs-2">
-          TalentHub
-        </NavLink>
 
-        <div className="d-flex align-items-center">
-          <button
-            className="btn btn-light d-lg-none me-2"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#sidebar"
+        <div className="d-flex align-items-center gap-3">
+          <div
+            className="bg-primary rounded-3 d-flex justify-content-center align-items-center text-white fw-bold"
+            style={{
+              width: 42,
+              height: 42,
+            }}
           >
-            <i className="bi bi-list fs-4"></i>
-          </button>
-
-          <NavLink className="navbar-brand fw-bold text-primary fs-2" to="/">
-            TalentHub
+            TH
+          </div>
+          <NavLink to="/">
+            <span className="fw-bold fs-4">
+              Talent<span className="text-primary">Hub</span>
+            </span>
           </NavLink>
         </div>
+        {/* Mobile */}
 
-        {/* Mobile Toggle */}
         <button
-          className="navbar-toggler"
-          type="button"
+          className="navbar-toggler border-0 shadow-none"
           data-bs-toggle="collapse"
           data-bs-target="#navbar"
         >
@@ -35,60 +37,71 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbar">
           {/* Search */}
-          <form className="mx-lg-4 my-3 my-lg-0 flex-grow-1">
-            <div className="input-group">
-              <span className="input-group-text bg-white">
-                <i className="bi bi-search"></i>
-              </span>
+
+          <div className="flex-grow-1 mx-lg-5 my-3 my-lg-0">
+            <div className="position-relative">
+              <i className="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"></i>
 
               <input
-                className="form-control"
+                type="search"
+                className="form-control rounded-pill border-0 bg-light ps-5 py-2"
                 placeholder="Search jobs, candidates..."
               />
             </div>
-          </form>
+          </div>
 
-          {/* Menu */}
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/jobs">
-                Jobs
-              </NavLink>
-            </li>
+          {/* Right */}
 
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/companies">
-                Companies
-              </NavLink>
-            </li>
+          <div className="d-flex align-items-center gap-2">
+            <div className="dropdown">
+              <button
+                className="btn d-flex align-items-center gap-2 border-0"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  src="https://i.pravatar.cc/100"
+                  className="rounded-circle"
+                  width="42"
+                  height="42"
+                  alt=""
+                />
 
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/salaries">
-                Salaries
-              </NavLink>
-            </li>
-          </ul>
+                <div className="text-start d-none d-lg-block">
+                  <div className="fw-semibold small">Pranav Kavade</div>
 
-          {/* Right Icons */}
+                  <small className="text-secondary">Recruiter</small>
+                </div>
 
-          <div className="d-flex align-items-center gap-3">
-            <button className="btn btn-light position-relative">
-              <i className="bi bi-bell fs-5"></i>
+                <i className="bi bi-chevron-down small"></i>
+              </button>
 
-              <span className="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle"></span>
-            </button>
+              <ul className="dropdown-menu dropdown-menu-end shadow-sm border-0 rounded-4 mt-3">
+                <li>
+                  <NavLink className="dropdown-item" to="/recruiter/profile">
+                    <i className="bi bi-person me-2"></i>
+                    Profile
+                  </NavLink>
+                </li>
 
-            <button className="btn btn-light">
-              <i className="bi bi-gear fs-5"></i>
-            </button>
+                <li>
+                  <NavLink className="dropdown-item" to="/settings">
+                    <i className="bi bi-gear me-2"></i>
+                    Settings
+                  </NavLink>
+                </li>
 
-            <img
-              src="https://i.pravatar.cc/40"
-              alt=""
-              className="rounded-circle"
-              width="40"
-              height="40"
-            />
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+
+                <li>
+                  <button className="dropdown-item text-danger">
+                    <i className="bi bi-box-arrow-right me-2"></i>
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
