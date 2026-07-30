@@ -1,4 +1,5 @@
 import ApplicantRow from "./ApplicantRow";
+import MobileApplicantCard from "./MobileApplicantCard";
 
 const applicants = [
   {
@@ -76,6 +77,11 @@ const RecentApplications = () => {
             ))}
           </tbody>
         </table>
+        <div className="d-lg-none p-3">
+          {applicants.map((applicant) => (
+            <MobileApplicantCard key={applicant.id} applicant={applicant} />
+          ))}
+        </div>
       </div>
 
       <div className="card-footer bg-white d-flex justify-content-between align-items-center">
