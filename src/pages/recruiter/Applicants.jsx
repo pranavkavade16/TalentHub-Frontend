@@ -1,5 +1,5 @@
-import ApplicantFilters from "../../components/applicants/ApplicantFilters";
-import ApplicantTable from "../../components/applicants/ApplicantTable";
+import ApplicantFilters from "../../components/applicants/ApplicantsFilters";
+import ApplicantTable from "../../components/applicants/ApplicantsTable";
 import PageHeader from "../../components/common/PageHeader";
 import Button from "../../components/common/Button";
 
