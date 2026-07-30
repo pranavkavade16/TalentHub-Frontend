@@ -9,11 +9,9 @@ import RecentApplications from "../../components/dashboard/RecentApplications";
 function RecruiterDashboard() {
   return (
     <>
-      <Navbar />
-
       <div className="container-fluid">
         <div className="row">
-          <Sidebar />
+          {/* <Sidebar /> */}
 
           <main className="col-lg-10 col-12 p-4 bg-light min-vh-100">
             <DashboardHeader
@@ -64,8 +62,6 @@ function RecruiterDashboard() {
           </main>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 
 import Navbar from "../components/layout/Navbar";
 import Sidebar from "../components/layout/Sidebar";
-import Footer from "../components/layout/Footer";
 
 const RecruiterLayout = () => {
   return (
@@ -18,8 +17,6 @@ const RecruiterLayout = () => {
           </main>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };
