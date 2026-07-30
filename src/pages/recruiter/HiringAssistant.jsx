@@ -1,5 +1,4 @@
 import PageHeader from "../../components/common/PageHeader";
-import SuggestedPrompts from "../../components/ai/SuggestedPrompts";
 import ChatBox from "../../components/ai/ChatBox";
 import ChatInput from "../../components/ai/ChatInput";
 
@@ -10,8 +9,6 @@ function HiringAssistant() {
         title="AI Hiring Assistant"
         subtitle="Analyze applicants and receive AI-powered hiring recommendations."
       />
-
-      <SuggestedPrompts />
 
       <ChatBox />
 
