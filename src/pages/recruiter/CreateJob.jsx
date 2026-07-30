@@ -1,8 +1,8 @@
-import PageHeader from "../../components/common/PageHeader";
 import Button from "../../components/common/Button";
+import PageHeader from "../../components/common/PageHeader";
 import JobForm from "../../components/jobs/JobForm";
 
-const CreateJob = () => {
+function CreateJob() {
   return (
     <>
       <PageHeader
@@ -19,6 +19,6 @@ const CreateJob = () => {
       <JobForm />
     </>
   );
-};
+}
 
 export default CreateJob;
