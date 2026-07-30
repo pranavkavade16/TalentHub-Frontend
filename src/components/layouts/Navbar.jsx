@@ -9,6 +9,20 @@ const Navbar = () => {
           TalentHub
         </NavLink>
 
+        <div className="d-flex align-items-center">
+          <button
+            className="btn btn-light d-lg-none me-2"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidebar"
+          >
+            <i className="bi bi-list fs-4"></i>
+          </button>
+
+          <NavLink className="navbar-brand fw-bold text-primary fs-2" to="/">
+            TalentHub
+          </NavLink>
+        </div>
+
         {/* Mobile Toggle */}
         <button
           className="navbar-toggler"
