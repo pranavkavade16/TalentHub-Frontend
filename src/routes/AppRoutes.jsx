@@ -19,7 +19,7 @@ import HiringAssistant from "../pages/recruiter/HiringAssistant";
 import Jobs from "../pages/recruiter/Jobs";
 import JobDetails from "../pages/common/JobDetails";
 
-// import ApplicantDashboard from "../pages/applicant/Dashboard";
+import ApplicantDashboard from "../pages/applicant/ApplicantDashboard";
 // import Applications from "../pages/applicant/Applications";
 
 function AppRoutes() {
@@ -53,10 +53,10 @@ function AppRoutes() {
           <Route path="/recruiter/jobDetails" element={<JobDetails />} />
         </Route>
 
-        {/* <Route element={<ApplicantLayout />}>
+        <Route element={<ApplicantLayout />}>
           <Route path="/applicant/dashboard" element={<ApplicantDashboard />} />
-          <Route path="/applicant/applications" element={<Applications />} />
-        </Route> */}
+          {/* <Route path="/applicant/applications" element={<Applications />} /> */}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
