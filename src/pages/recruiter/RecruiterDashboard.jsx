@@ -1,10 +1,6 @@
-import Navbar from "../../components/layout/Navbar";
-import Sidebar from "../../components/layout/Sidebar";
-import Footer from "../../components/layout/Footer";
-
 import DashboardHeader from "../../components/dashboard/DashboardHeader";
-import StatsCard from "../../components/dashboard/StatsCard";
-import RecentApplications from "../../components/dashboard/RecentApplications";
+import StatsCard from "../../components/dashboard/StatusCard";
+import RecentApplications from "./RecentApplications";
 
 function RecruiterDashboard() {
   return (
