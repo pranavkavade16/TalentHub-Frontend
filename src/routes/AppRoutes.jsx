@@ -12,7 +12,7 @@ import Landing from "../pages/public/Landing";
 // import Register from "../pages/auth/Register";
 
 import RecruiterDashboard from "../pages/recruiter/RecruiterDashboard";
-// import CreateJob from "../pages/recruiter/CreateJob";
+import CreateJob from "../pages/recruiter/CreateJob";
 // import Applicants from "../pages/recruiter/Applicants";
 
 // import ApplicantDashboard from "../pages/applicant/Dashboard";
@@ -38,8 +38,8 @@ function AppRoutes() {
 
         <Route element={<RecruiterLayout />}>
           <Route path="/recruiter/dashboard" element={<RecruiterDashboard />} />
-          {/* <Route path="/recruiter/jobs/create" element={<CreateJob />} />
-          <Route path="/recruiter/applicants" element={<Applicants />} /> */}
+          <Route path="/recruiter/jobs/create" element={<CreateJob />} />
+          {/* <Route path="/recruiter/applicants" element={<Applicants />} />  */}
         </Route>
 
         {/* <Route element={<ApplicantLayout />}>
