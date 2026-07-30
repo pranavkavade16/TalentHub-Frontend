@@ -14,6 +14,7 @@ import Landing from "../pages/public/Landing";
 import RecruiterDashboard from "../pages/recruiter/RecruiterDashboard";
 import CreateJob from "../pages/recruiter/CreateJob";
 import Applicants from "../pages/recruiter/Applicants";
+import Profile from "../pages/recruiter/Profile";
 
 // import ApplicantDashboard from "../pages/applicant/Dashboard";
 // import Applications from "../pages/applicant/Applications";
@@ -40,6 +41,7 @@ function AppRoutes() {
           <Route path="/recruiter/dashboard" element={<RecruiterDashboard />} />
           <Route path="/recruiter/jobs/create" element={<CreateJob />} />
           <Route path="/recruiter/applicants" element={<Applicants />} />
+          <Route path="/recruiter/profile" element={<Profile />} />
         </Route>
 
         {/* <Route element={<ApplicantLayout />}>
