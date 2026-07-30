@@ -46,28 +46,44 @@ const applicants = [
 
 const RecentApplications = () => {
   return (
-    <div className="card border-0 shadow-sm rounded-4 mt-4">
-      <div className="card-header bg-white d-flex justify-content-between align-items-center py-3">
-        <h5 className="mb-0">Recent Applications</h5>
+    <div className="card border-0 shadow-sm rounded-3 mt-4">
+      {/* Header */}
 
-        <button className="btn btn-link text-decoration-none">View All</button>
+      <div className="card-header bg-white border-bottom d-flex justify-content-between align-items-center py-3 px-4">
+        <h5 className="fw-semibold mb-0">Recent Applications</h5>
+
+        <button className="btn btn-link btn-sm text-decoration-none fw-semibold p-0">
+          View All
+        </button>
       </div>
 
-      <div className="table-responsive">
+      {/* Desktop Table */}
+
+      <div className="table-responsive d-none d-lg-block">
         <table className="table align-middle mb-0">
-          <thead className="table-light">
+          <thead className="bg-light">
             <tr>
-              <th>Applicant</th>
+              <th className="text-uppercase text-muted small fw-semibold px-4 py-3">
+                Applicant
+              </th>
 
-              <th>Job Title</th>
+              <th className="text-uppercase text-muted small fw-semibold py-3">
+                Job Title
+              </th>
 
-              <th>Applied</th>
+              <th className="text-uppercase text-muted small fw-semibold py-3">
+                Applied
+              </th>
 
-              <th>Experience</th>
+              <th className="text-uppercase text-muted small fw-semibold py-3">
+                Experience
+              </th>
 
-              <th>Status</th>
+              <th className="text-uppercase text-muted small fw-semibold py-3">
+                Status
+              </th>
 
-              <th></th>
+              <th className="py-3"></th>
             </tr>
           </thead>
 
@@ -77,31 +93,36 @@ const RecentApplications = () => {
             ))}
           </tbody>
         </table>
-        <div className="d-lg-none p-3">
-          {applicants.map((applicant) => (
-            <MobileApplicantCard key={applicant.id} applicant={applicant} />
-          ))}
-        </div>
       </div>
 
-      <div className="card-footer bg-white d-flex justify-content-between align-items-center">
-        <small className="text-muted">Showing 4 applications</small>
+      {/* Mobile */}
 
-        <nav>
-          <ul className="pagination pagination-sm mb-0">
-            <li className="page-item disabled">
-              <button className="page-link">Previous</button>
-            </li>
+      <div className="d-lg-none p-3">
+        {applicants.map((applicant) => (
+          <MobileApplicantCard key={applicant.id} applicant={applicant} />
+        ))}
+      </div>
 
-            <li className="page-item active">
-              <button className="page-link">1</button>
-            </li>
+      {/* Footer */}
 
-            <li className="page-item">
-              <button className="page-link">Next</button>
-            </li>
-          </ul>
-        </nav>
+      <div className="card-footer bg-white border-top px-4 py-3 d-flex justify-content-between align-items-center">
+        <small className="text-muted">
+          Showing <strong>5</strong> of <strong>245</strong> applications
+        </small>
+
+        <div className="d-flex align-items-center gap-2">
+          <button className="btn btn-light btn-sm border">
+            <i className="bi bi-chevron-left"></i>
+          </button>
+
+          <span className="small text-muted">
+            Page <strong>1</strong> of <strong>49</strong>
+          </span>
+
+          <button className="btn btn-light btn-sm border">
+            <i className="bi bi-chevron-right"></i>
+          </button>
+        </div>
       </div>
     </div>
   );

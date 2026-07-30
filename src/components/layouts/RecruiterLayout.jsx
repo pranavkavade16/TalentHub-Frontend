@@ -8,14 +8,17 @@ const RecruiterLayout = () => {
     <>
       <Navbar />
 
-      <div className="container-fluid">
-        <div className="row">
-          <Sidebar />
+      <div className="d-flex">
+        <Sidebar />
 
-          <main className="col-lg-10 col-md-9 col-12 bg-light p-4 min-vh-100">
-            <Outlet />
-          </main>
-        </div>
+        <main
+          className="flex-grow-1 bg-light p-4"
+          style={{
+            minHeight: "calc(100vh - 72px)",
+          }}
+        >
+          <Outlet />
+        </main>
       </div>
     </>
   );
