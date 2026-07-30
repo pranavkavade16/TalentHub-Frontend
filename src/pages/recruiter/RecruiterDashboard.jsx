@@ -16,7 +16,12 @@ function RecruiterDashboard() {
           <Sidebar />
 
           <main className="col-lg-10 col-12 p-4 bg-light min-vh-100">
-            <DashboardHeader />
+            <DashboardHeader
+              title="Recruiter Dashboard"
+              subtitle="Manage your jobs and hiring pipeline"
+              buttonText="Post New Job"
+              buttonIcon="bi-plus-lg"
+            />
 
             <div className="row g-4 my-4">
               <div className="col-xl-3 col-md-6">
