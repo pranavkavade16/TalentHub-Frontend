@@ -1,34 +1,32 @@
-const StatsCard = ({ title, value, growth, icon, iconColor = "primary" }) => {
+const StatsCard = ({ title, value, growth, icon }) => {
   return (
-    <div className="card border-0 shadow-sm rounded-4 h-100">
-      <div className="card-body">
-        <div className="d-flex justify-content-between align-items-start">
+    <div className="card border-0 shadow-sm rounded-3 h-100">
+      <div className="card-body p-4">
+        <div className="d-flex justify-content-between align-items-start mb-4">
           <div>
-            <small className="text-uppercase text-secondary fw-semibold">
+            <small className="text-muted fw-semibold text-uppercase">
               {title}
             </small>
 
-            <h2 className="fw-bold mt-3 mb-0">{value}</h2>
+            <h2 className="fw-bold mt-2 mb-0">{value}</h2>
           </div>
 
           <div
-            className={`bg-${iconColor} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center`}
+            className="bg-primary bg-opacity-10 rounded-3 d-flex justify-content-center align-items-center"
             style={{
-              width: "48px",
-              height: "48px",
+              width: 48,
+              height: 48,
             }}
           >
-            <i className={`bi ${icon} text-${iconColor} fs-5`}></i>
+            <i className={`bi ${icon} text-primary fs-5`}></i>
           </div>
         </div>
 
-        <div className="mt-4">
-          <span className="badge text-success bg-success-subtle px-3 py-2 rounded-pill">
-            <i className="bi bi-arrow-up me-1"></i>
+        <small className="text-success fw-medium">
+          <i className="bi bi-arrow-up me-1"></i>
 
-            {growth}
-          </span>
-        </div>
+          {growth}
+        </small>
       </div>
     </div>
   );
