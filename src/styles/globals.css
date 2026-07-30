@@ -37,3 +37,30 @@ a {
 .table tbody tr:hover {
   background: #f9fafb;
 }
+
+.sidebar-link {
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #eff6ff;
+  color: #2563eb !important;
+}
+
+.sidebar-link.active {
+  background: #2563eb !important;
+  color: #fff !important;
+}
+
+.sidebar-link.active i {
+  color: #fff;
+}
+
+.sidebar-link i {
+  width: 18px;
+  text-align: center;
+}
+
+.offcanvas {
+  width: 230px !important;
+}
