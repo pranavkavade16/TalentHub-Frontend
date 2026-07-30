@@ -17,6 +17,7 @@ import Applicants from "../pages/recruiter/Applicants";
 import Profile from "../pages/recruiter/Profile";
 import HiringAssistant from "../pages/recruiter/HiringAssistant";
 import Jobs from "../pages/recruiter/Jobs";
+import JobDetails from "../pages/common/JobDetails";
 
 // import ApplicantDashboard from "../pages/applicant/Dashboard";
 // import Applications from "../pages/applicant/Applications";
@@ -49,6 +50,7 @@ function AppRoutes() {
             element={<HiringAssistant />}
           />
           <Route path="/recruiter/jobs" element={<Jobs />} />
+          <Route path="/recruiter/jobDetails" element={<JobDetails />} />
         </Route>
 
         {/* <Route element={<ApplicantLayout />}>
