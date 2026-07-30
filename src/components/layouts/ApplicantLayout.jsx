@@ -1,11 +1,25 @@
 import { Outlet } from "react-router-dom";
 
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+
 function ApplicantLayout() {
   return (
     <>
-      {/* Navbar */}
+      <Navbar />
 
-      <Outlet />
+      <div className="d-flex">
+        <Sidebar />
+
+        <main
+          className="flex-grow-1 bg-light p-4"
+          style={{
+            minHeight: "calc(100vh - 72px)",
+          }}
+        >
+          <Outlet />
+        </main>
+      </div>
     </>
   );
 }
