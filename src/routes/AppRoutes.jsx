@@ -16,6 +16,7 @@ import CreateJob from "../pages/recruiter/CreateJob";
 import Applicants from "../pages/recruiter/Applicants";
 import Profile from "../pages/recruiter/Profile";
 import HiringAssistant from "../pages/recruiter/HiringAssistant";
+import Jobs from "../pages/recruiter/Jobs";
 
 // import ApplicantDashboard from "../pages/applicant/Dashboard";
 // import Applications from "../pages/applicant/Applications";
@@ -47,6 +48,7 @@ function AppRoutes() {
             path="/recruiter/hiringAIAssistant"
             element={<HiringAssistant />}
           />
+          <Route path="/recruiter/jobs" element={<Jobs />} />
         </Route>
 
         {/* <Route element={<ApplicantLayout />}>
