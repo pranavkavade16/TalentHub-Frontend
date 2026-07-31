@@ -1,6 +1,6 @@
 const skills = ["Engineering", "Design", "Product Management", "Leadership"];
 
-const BioCard = () => {
+const BioCard = ({ about }) => {
   return (
     <div className="card border-0 shadow-sm rounded-4 mb-4">
       <div className="card-body p-4">

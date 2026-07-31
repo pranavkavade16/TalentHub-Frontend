@@ -1,10 +1,10 @@
-import ProfileHeader from "../../components/profile/ProfileHeader";
-import AboutCard from "../../components/profile/AboutCard";
-import SkillsCard from "../../components/profile/SkillsCard";
-import ExperienceCard from "../../components/profile/ExperienceCard";
-import EducationCard from "../../components/profile/EducationCard";
-import ResumeCard from "../../components/profile/ResumeCard";
-import ContactCard from "../../components/profile/ContactCard";
+import ProfileHero from "../../components/recruiter/ProfileHero";
+import BioCard from "../../components/recruiter/BioCard";
+import SkillsCard from "../../components/applicants/SkillCard";
+import ExperienceCard from "../../components/applicants/ExperienceCard";
+import EducationCard from "../../components/applicants/EducationCard";
+import ResumeCard from "../../components/applicants/ResumeCard";
+import ContactCard from "../../components/recruiter/CompanyCard";
 
 const applicant = {
   name: "Pranav Kavade",
@@ -60,12 +60,12 @@ const applicant = {
 function ApplicantProfile() {
   return (
     <>
-      <ProfileHeader profile={applicant} />
+      <ProfileHero profile={applicant} />
 
       <div className="row g-4 mt-1">
         {/* Left */}
         <div className="col-lg-8">
-          <AboutCard about={applicant.about} skills={applicant.skills} />
+          <BioCard about={applicant.about} skills={applicant.skills} />
 
           <ExperienceCard experience={applicant.experience} />
 
