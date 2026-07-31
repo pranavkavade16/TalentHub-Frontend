@@ -1,10 +1,39 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, Link } from "react-router-dom";
+
+import { loginUser } from "../../features/auth/authSlice";
 
 import Button from "../../components/common/Button";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isLoading, error } = useSelector((state) => state.auth);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    const result = await dispatch(loginUser(data));
+
+    if (loginUser.fulfilled.match(result)) {
+      const role = result.payload.user.role;
+
+      if (role === "candidate") {
+        navigate("/applicant/dashboard");
+      } else {
+        navigate("/recruiter/dashboard");
+      }
+    }
+  };
 
   return (
     <div className="container-fluid bg-light min-vh-100 d-flex align-items-center justify-content-center py-5">
@@ -33,7 +62,7 @@ const LoginPage = () => {
             <p className="text-muted">Login to your account to continue</p>
           </div>
 
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
               <label className="form-label fw-semibold">Email Address</label>
 
@@ -44,9 +73,16 @@ const LoginPage = () => {
 
                 <input
                   type="email"
-                  className="form-control"
+                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
                   placeholder="Enter your email"
+                  {...register("email", {
+                    required: "Email is required",
+                  })}
                 />
+
+                {errors.email && (
+                  <div className="invalid-feedback">{errors.email.message}</div>
+                )}
               </div>
             </div>
 
@@ -60,8 +96,11 @@ const LoginPage = () => {
 
                 <input
                   type={showPassword ? "text" : "password"}
-                  className="form-control"
+                  className={`form-control ${errors.password ? "is-invalid" : ""}`}
                   placeholder="Enter your password"
+                  {...register("password", {
+                    required: "Password is required",
+                  })}
                 />
 
                 <button
@@ -97,7 +136,11 @@ const LoginPage = () => {
               </Link>
             </div>
 
-            <Button className="w-100 py-3">Login</Button>
+            <Button type="submit" className="w-100 py-3" disabled={isLoading}>
+              {isLoading ? "Logging in..." : "Login"}
+            </Button>
+
+            {error && <div className="alert alert-danger mt-3">{error}</div>}
           </form>
 
           <div className="text-center mt-5">
