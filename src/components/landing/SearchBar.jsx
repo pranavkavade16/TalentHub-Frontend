@@ -2,39 +2,24 @@ import Button from "../common/Button";
 
 const SearchBar = () => {
   return (
-    <div className="card border-0 shadow-lg rounded-4 p-3 mx-auto">
+    <div className="search-wrapper">
       <div className="row g-3 align-items-center">
-        {/* Job Search */}
         <div className="col-lg-5">
-          <div className="input-group">
-            <span className="input-group-text bg-white border-end-0">
-              <i className="bi bi-search text-muted"></i>
-            </span>
+          <div className="search-input">
+            <i className="bi bi-search"></i>
 
-            <input
-              type="text"
-              className="form-control border-start-0"
-              placeholder="Job title, keywords or company"
-            />
+            <input type="text" placeholder="Job title, keywords or company" />
           </div>
         </div>
 
-        {/* Location */}
         <div className="col-lg-4">
-          <div className="input-group">
-            <span className="input-group-text bg-white border-end-0">
-              <i className="bi bi-geo-alt text-muted"></i>
-            </span>
+          <div className="search-input">
+            <i className="bi bi-geo-alt"></i>
 
-            <input
-              type="text"
-              className="form-control border-start-0"
-              placeholder="Location or Remote"
-            />
+            <input type="text" placeholder="Location or Remote" />
           </div>
         </div>
 
-        {/* Button */}
         <div className="col-lg-3 d-grid">
           <Button icon="bi-search">Search Jobs</Button>
         </div>

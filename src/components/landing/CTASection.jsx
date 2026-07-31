@@ -1,75 +1,50 @@
-import Button from "../common/Button";
+import { Link } from "react-router-dom";
+
+const cards = [
+  {
+    title: "Find Your Next Role",
+    description:
+      "Discover thousands of opportunities from leading companies. Build your profile, apply instantly, and accelerate your career with AI-powered recommendations.",
+    icon: "bi-briefcase-fill",
+    background: "primary",
+    button: "Find Jobs",
+    link: "/jobs",
+  },
+  {
+    title: "Hire Top Talent",
+    description:
+      "Post jobs, discover qualified candidates, and manage your hiring pipeline using AI-powered recruitment tools.",
+    icon: "bi-people-fill",
+    background: "dark",
+    button: "Hire Talent",
+    link: "/register",
+  },
+];
 
 const CTASection = () => {
   return (
-    <section className="py-5">
+    <section className="landing-section py-5">
       <div className="container">
         <div className="row g-4">
-          {/* Candidate Card */}
-          <div className="col-lg-6">
-            <div className="card border-0 shadow-sm rounded-4 h-100">
-              <div className="card-body p-5 d-flex flex-column">
-                <div
-                  className="bg-primary text-white rounded-4 d-flex align-items-center justify-content-center mb-4"
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                  }}
-                >
-                  <i
-                    className="bi bi-briefcase-fill"
-                    style={{ fontSize: "2rem" }}
-                  ></i>
+          {cards.map((card) => (
+            <div className="col-lg-6" key={card.title}>
+              <div className="cta-card h-100">
+                <div className={`cta-icon bg-${card.background}`}>
+                  <i className={`bi ${card.icon}`}></i>
                 </div>
 
-                <h3 className="fw-bold mb-3">Find Your Next Role</h3>
+                <h2 className="fw-bold mb-3">{card.title}</h2>
 
-                <p className="text-muted mb-4">
-                  Discover thousands of opportunities from top companies. Build
-                  your profile, apply effortlessly, and accelerate your career
-                  with AI-powered job matching.
-                </p>
+                <p className="text-muted mb-5">{card.description}</p>
 
-                <div className="mt-auto">
-                  <Button icon="bi-arrow-right">Find Jobs</Button>
-                </div>
+                <Link to={card.link} className="cta-link">
+                  {card.button}
+
+                  <i className="bi bi-arrow-right ms-2"></i>
+                </Link>
               </div>
             </div>
-          </div>
-
-          {/* Recruiter Card */}
-          <div className="col-lg-6">
-            <div className="card border-0 shadow-sm rounded-4 h-100">
-              <div className="card-body p-5 d-flex flex-column">
-                <div
-                  className="bg-dark text-white rounded-4 d-flex align-items-center justify-content-center mb-4"
-                  style={{
-                    width: "70px",
-                    height: "70px",
-                  }}
-                >
-                  <i
-                    className="bi bi-people-fill"
-                    style={{ fontSize: "2rem" }}
-                  ></i>
-                </div>
-
-                <h3 className="fw-bold mb-3">Hire Top Talent</h3>
-
-                <p className="text-muted mb-4">
-                  Post jobs, discover qualified candidates, manage hiring
-                  pipelines, and streamline recruitment with AI-powered
-                  recommendations.
-                </p>
-
-                <div className="mt-auto">
-                  <Button variant="outline-primary" icon="bi-arrow-right">
-                    Hire Talent
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+
 body {
   font-family: "Inter", sans-serif;
   background: var(--bg-page);
@@ -63,4 +64,551 @@ a {
 
 .offcanvas {
   width: 230px !important;
+}
+
+/* ===========================
+   Landing Navbar
+=========================== */
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  letter-spacing: -0.5px;
+}
+
+.nav-link {
+  color: #475569 !important;
+  transition: 0.25s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+
+  width: 100%;
+  height: 3px;
+
+  background: var(--primary);
+  border-radius: 30px;
+}
+
+/* ===========================================
+   HERO
+=========================================== */
+
+.landing-hero {
+  padding: 120px 0;
+  background: linear-gradient(
+      180deg,
+      #f8f9ff 0%,
+      #ffffff 100%
+  );
+
+  position: relative;
+}
+
+/* dotted pattern */
+
+.landing-hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+  radial-gradient(
+      rgba(37,99,235,.08) 1px,
+      transparent 1px
+  );
+
+  background-size:26px 26px;
+
+  pointer-events:none;
+
+}
+
+.hero-circle{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  filter:blur(90px);
+
+}
+
+.hero-circle-1{
+
+  width:340px;
+
+  height:340px;
+
+  background:#2563eb20;
+
+  top:-80px;
+
+  left:-120px;
+
+}
+
+.hero-circle-2{
+
+  width:340px;
+
+  height:340px;
+
+  background:#14b8a620;
+
+  right:-100px;
+
+  bottom:-60px;
+
+}
+
+.hero-badge{
+
+  display:inline-block;
+
+  padding:10px 20px;
+
+  background:#e8f0ff;
+
+  color:#2563eb;
+
+  border-radius:999px;
+
+  font-weight:600;
+
+}
+
+.hero-title{
+
+  font-size:clamp(3rem,6vw,5rem);
+
+  font-weight:800;
+
+  line-height:1.1;
+
+  color:#0f172a;
+
+  margin:30px 0;
+
+}
+
+.hero-subtitle{
+
+  max-width:760px;
+
+  margin:auto;
+
+  font-size:1.15rem;
+
+  color:#64748b;
+
+  margin-bottom:45px;
+
+}
+
+.search-wrapper{
+
+  background:rgba(255,255,255,.8);
+
+  backdrop-filter:blur(14px);
+
+  border-radius:24px;
+
+  padding:18px;
+
+  border:1px solid #e5e7eb;
+
+  box-shadow:
+  0 10px 30px rgba(15,23,42,.08);
+
+}
+
+.search-input{
+
+  display:flex;
+
+  align-items:center;
+
+  background:#fff;
+
+  border-radius:14px;
+
+  border:1px solid #e5e7eb;
+
+  padding:14px 18px;
+
+}
+
+.search-input i{
+
+  color:#64748b;
+
+  font-size:20px;
+
+}
+
+.search-input input{
+
+  border:none;
+
+  outline:none;
+
+  width:100%;
+
+  margin-left:12px;
+
+  background:transparent;
+
+}
+
+.popular-searches{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:35px;
+
+}
+
+.popular-chip{
+
+  border:none;
+
+  background:#eef4ff;
+
+  color:#2563eb;
+
+  padding:10px 18px;
+
+  border-radius:999px;
+
+  transition:.3s;
+
+}
+
+.popular-chip:hover{
+
+  background:#2563eb;
+
+  color:#fff;
+
+}
+
+/* ============================
+      CTA SECTION
+============================ */
+
+.landing-section{
+
+    background:#fff;
+
+}
+
+.cta-card{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:50px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+        0 10px 30px rgba(15,23,42,.05);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.cta-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(37,99,235,.12);
+
+}
+
+.cta-icon{
+
+    width:78px;
+
+    height:78px;
+
+    border-radius:22px;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:34px;
+
+    margin-bottom:35px;
+
+}
+
+.cta-link{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.cta-link:hover{
+
+    color:var(--primary);
+
+}
+
+.cta-link i{
+
+    transition:.3s;
+
+}
+
+.cta-link:hover i{
+
+    transform:translateX(6px);
+
+}
+
+/* ===========================
+      FEATURED JOBS
+=========================== */
+
+.featured-section{
+
+    background:#f8f9ff;
+
+}
+
+.landing-job-card{
+
+    position:relative;
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    box-shadow:0 5px 20px rgba(15,23,42,.05);
+
+}
+
+.landing-job-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(37,99,235,.10);
+
+}
+
+.featured-badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:#eef4ff;
+
+    color:var(--primary);
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+.company-logo{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:26px;
+
+    flex-shrink:0;
+
+}
+
+.job-pill{
+
+    background:#f1f5f9;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    color:#475569;
+
+}
+
+.apply-link{
+
+    border:none;
+
+    background:none;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.apply-link i{
+
+    transition:.3s;
+
+}
+
+.apply-link:hover i{
+
+    transform:translateX(5px);
+
+}
+/* ==========================
+   RECENT JOBS
+========================== */
+
+.recent-job-item{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    border:1px solid #e5e7eb;
+
+    transition:.3s;
+
+    box-shadow:0 5px 18px rgba(15,23,42,.05);
+
+}
+
+.recent-job-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.08);
+
+}
+
+.recent-company-logo{
+
+    width:60px;
+
+    height:60px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color:#fff;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.bookmark-btn{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#f1f5f9;
+
+    transition:.3s;
+
+}
+
+.bookmark-btn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
 }
