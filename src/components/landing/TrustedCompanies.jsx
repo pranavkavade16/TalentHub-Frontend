@@ -1,5 +1,42 @@
 import CompanyCard from "./CompanyCard";
-import { companies } from "./companiesData";
+export const companies = [
+  {
+    id: 1,
+    name: "Google",
+    icon: "bi-google",
+    color: "#4285F4",
+  },
+  {
+    id: 2,
+    name: "Microsoft",
+    icon: "bi-microsoft",
+    color: "#00A4EF",
+  },
+  {
+    id: 3,
+    name: "Amazon",
+    icon: "bi-box-seam",
+    color: "#FF9900",
+  },
+  {
+    id: 4,
+    name: "Netflix",
+    icon: "bi-play-circle-fill",
+    color: "#E50914",
+  },
+  {
+    id: 5,
+    name: "Adobe",
+    icon: "bi-palette-fill",
+    color: "#FF0000",
+  },
+  {
+    id: 6,
+    name: "Spotify",
+    icon: "bi-spotify",
+    color: "#1DB954",
+  },
+];
 
 const TrustedCompanies = () => {
   return (

@@ -4,6 +4,7 @@ import CTASection from "../../components/landing/CTASection";
 import FeaturedJobs from "../../components/landing/FeaturedJobs";
 import LandingNavbar from "../../components/landing/LandingNavbar";
 import TrustedCompanies from "../../components/landing/TrustedCompanies";
+import LandingFooter from "../../components/landing/LandingFooter";
 
 function LandingPage() {
   return (
@@ -13,7 +14,8 @@ function LandingPage() {
       <CTASection />
       <FeaturedJobs />
       <RecentJobs />
-      <TrustedCompanies />s
+      <TrustedCompanies />
+      <LandingFooter />
     </>
   );
 }
