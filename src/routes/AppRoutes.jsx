@@ -18,7 +18,7 @@ import Profile from "../pages/recruiter/Profile";
 import HiringAssistant from "../pages/recruiter/HiringAssistant";
 import Jobs from "../pages/recruiter/Jobs";
 import JobDetails from "../pages/common/JobDetails";
-
+import RegisterPage from "../pages/auth/ResgisterPage";
 import ApplicantDashboard from "../pages/applicant/ApplicantDashboard";
 import Bookmarks from "../pages/applicant/Bookmarks";
 import Applications from "../pages/applicant/Applications";
@@ -31,9 +31,9 @@ function AppRoutes() {
       <Routes>
         {/* <Route path="/" element={<Landing />} />
 
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} /> */}
 
-        <Route path="/register" element={<Register />} /> */}
+        <Route path="/register" element={<RegisterPage />} />
 
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Landing />} />
