@@ -21,6 +21,7 @@ import JobDetails from "../pages/common/JobDetails";
 
 import ApplicantDashboard from "../pages/applicant/ApplicantDashboard";
 import Bookmarks from "../pages/applicant/Bookmarks";
+import Applications from "../pages/applicant/Applications";
 // import Applications from "../pages/applicant/Applications";
 
 function AppRoutes() {
@@ -57,6 +58,7 @@ function AppRoutes() {
         <Route element={<ApplicantLayout />}>
           <Route path="/applicant/dashboard" element={<ApplicantDashboard />} />
           <Route path="/applicant/bookmarks" element={<Bookmarks />} />
+          <Route path="/applicant/applications" element={<Applications />} />
           {/* <Route path="/applicant/applications" element={<Applications />} /> */}
         </Route>
       </Routes>
