@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
 
-import { loginUser } from "../../features/auth/authSlice";
+import { loginUser } from "../../redux/features/auth/authSlice";
 
 import Button from "../../components/common/Button";
 

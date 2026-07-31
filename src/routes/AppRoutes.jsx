@@ -8,7 +8,7 @@ import Landing from "../pages/public/Landing";
 // import Jobs from "../pages/public/Jobs";
 // import JobDetails from "../pages/public/JobDetails";
 
-// import Login from "../pages/auth/Login";
+import Login from "../pages/auth/Login";
 // import Register from "../pages/auth/Register";
 
 import RecruiterDashboard from "../pages/recruiter/RecruiterDashboard";
@@ -29,9 +29,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Landing />} />
-
-        <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<RegisterPage />} />
 
