@@ -1,5 +1,14 @@
-function Landing() {
-  return <h1>Landing Page</h1>;
-}
+import HeroSection from "../../components/landing/HeroSection";
+import CTASection from "../../components/landing/CTASection";
 
-export default Landing;
+const LandingPage = () => {
+  return (
+    <>
+      <HeroSection />
+
+      <CTASection />
+    </>
+  );
+};
+
+export default LandingPage;
