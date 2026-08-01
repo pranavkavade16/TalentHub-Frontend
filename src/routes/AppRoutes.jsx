@@ -29,16 +29,10 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
-
-        <Route path="/register" element={<RegisterPage />} />
-
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Landing />} />
-          {/* <Route path="/jobs" element={<Jobs />} />
-          <Route path="/jobs/:id" element={<JobDetails />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} /> */}
+          <Route path="/register" element={<RegisterPage />} />
         </Route>
 
         <Route element={<RecruiterLayout />}>
